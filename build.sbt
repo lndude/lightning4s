@@ -49,7 +49,6 @@ lazy val eclair = (project in file("eclair"))
     core
   )
 
-
 lazy val dependencies = new {
   val akkaHttpVersion = "10.1.10"
   val akkaVersion = "2.5.25"
@@ -88,7 +87,6 @@ lazy val dependencies = new {
   val pureConfig = Seq("com.github.pureconfig" %% "pureconfig" % pureconfigVersion)
 }
 
-
 lazy val coreDependencies = Seq(
   dependencies.logging,
   dependencies.akka,
@@ -103,5 +101,6 @@ lazy val coreSettings = Seq(
 )
 
 addCommandAlias("testAll", ";test")
-addCommandAlias("formatAll", ";scalafmt;test:scalafmt;scalafmtSbt")
+addCommandAlias("formatAll", ";scalafmtAll;test:scalafmtAll;scalafmtSbt")
 addCommandAlias("compileAll", ";compile;test:compile")
+addCommandAlias("checkFormatAll", ";scalafmtCheckAll;scalafmtSbtCheck")
