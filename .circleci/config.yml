@@ -29,10 +29,7 @@ jobs:
       - run:
           name: Style check
           command: |
-            sbt formatAll
-            if [[ -n $(git diff --name-only) ]]; then
-              echo "These files are not formatted correctly:" && git diff --name-only && exit 1;
-            fi
+            sbt checkFormatAll
 
       - run:
           name: Compile
