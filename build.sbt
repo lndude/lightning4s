@@ -4,7 +4,7 @@ name := "lightning4s"
 
 version := Source.fromFile("VERSION").getLines.mkString
 
-scalaVersion := "2.13.1"
+scalaVersion := "2.12.10"
 
 packageName in Universal := name.value
 
