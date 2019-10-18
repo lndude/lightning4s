@@ -10,7 +10,6 @@ packageName in Universal := name.value
 
 scalafmtOnCompile := true
 
-
 lazy val all = (project in file("."))
   .settings(
     libraryDependencies ++= coreDependencies
@@ -52,13 +51,13 @@ lazy val eclair = (project in file("eclair"))
 
 
 lazy val dependencies = new {
-  val akkaHttpVersion = "10.1.9"
+  val akkaHttpVersion = "10.1.10"
   val akkaVersion = "2.5.25"
   val logbackVersion = "1.3.0-alpha4"
-  val catsVersion = "1.6.1"
-  val sttpVersion = "1.6.6"
-  val scalatestVersion = "3.0.8"
-  val pureconfigVersion = "0.11.1"
+  val catsVersion = "2.0.0"
+  val sttpVersion = "1.7.2"
+  val scalatestVersion = "3.2.0-M1"
+  val pureconfigVersion = "0.12.1"
   val scalaLoggingVersion = "3.9.2"
 
   val test = Seq(
